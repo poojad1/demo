@@ -1,0 +1,56 @@
+spring:
+  profiles: local
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/dmap_content_portal
+#    username: dmap_portal_data_admin
+#    password: dmap_portal_data_password
+#    driver-class-name: org.postgresql.Driver
+  show_sql: true
+  #Hibernate & JPA settings
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        showsql: true
+        jdbc:
+          lob:
+            non_contextual_creation : false
+            hibernate:
+      ddl-auto: validate
+
+  liquibase:
+    change-log: classpath:changes/changelogs.master.yaml
+powerbi:
+  baseUrl:  https://api.powerbi.com/v1.0/myorg
+  authority:  https://login.windows.net/common/oauth2/authorize
+  resourceUri:  https://analysis.windows.net/powerbi/api
+  clientId: a5589aa5-f0eb-46fc-bde1-6f8989a056be
+  username: uidevops@urbaninsights.onmicrosoft.com
+  password: AaBbCcDd1234$
+
+server:
+  port: 8080
+
+
+azure:
+  application-insights:
+    instrumentation-key: 1f66ae6d-0a91-405e-900b-00030fa1c8dd
+
+
+keycloak:
+  cors: true
+  realm: Secure-24-BOIL
+  auth-server-url: https://keycloak-v1.azurewebsites.net/auth
+  ssl-required: external
+  resource: sample-backend
+  bearer-only: true
+  use-resource-role-mappings: true
+  credentials:
+    secret: 31e5af31-e81d-4e8e-8d86-6c5842b33acd
+  #  realm-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8Q5HRrW6SP1HONZkiv+3ZclwJTO1nHTdj8INbG9NmFK3rSj9qgeBiKf7LofNtIu6JSDSJNBf29oHAeUbbcu3RaxvISgFiT9aHDiDW6Ytah2L24LXQPRFnpEm+Drt+/+8H8qaNQdr1IPVf7GcLtSsmyPnNacKaQ7ZfiblTyPLMHht8/MPN7733ipAfFHFsx1rTRw6RuTLOfCR9cUdi83NZsessAjwejaNgJbAKCNFbG7Hsg2zo36NN0Oy+nYAWAGQrMfYyh3sNwL08DKiNiIHDpLKQ3CzfJxZCeeGBiWPQBlIPA9jNDH+isebSOZbco2kwI/8rdXL0FAgiIMj0YDgmwIDAQAB
+
+  #  realm-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8Q5HRrW6SP1HONZkiv+3ZclwJTO1nHTdj8INbG9NmFK3rSj9qgeBiKf7LofNtIu6JSDSJNBf29oHAeUbbcu3RaxvISgFiT9aHDiDW6Ytah2L24LXQPRFnpEm+Drt+/+8H8qaNQdr1IPVf7GcLtSsmyPnNacKaQ7ZfiblTyPLMHht8/MPN7733ipAfFHFsx1rTRw6RuTLOfCR9cUdi83NZsessAjwejaNgJbAKCNFbG7Hsg2zo36NN0Oy+nYAWAGQrMfYyh3sNwL08DKiNiIHDpLKQ3CzfJxZCeeGBiWPQBlIPA9jNDH+isebSOZbco2kwI/8rdXL0FAgiIMj0YDgmwIDAQAB
+
+
+
+

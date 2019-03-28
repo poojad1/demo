@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: demo
+  profiles:
+    active: "local"
+  main:
+    banner-mode: "off"

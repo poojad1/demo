@@ -1,0 +1,5 @@
+
+# Specify the instrumentation key of your Application Insights resource.
+azure.application-insights.instrumentation-key=1f66ae6d-0a91-405e-900b-00030fa1c8dd
+# Specify the name of your springboot application. This can be any logical name you would like to give to your app.
+spring.application.name=demoapp
